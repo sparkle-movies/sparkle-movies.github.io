@@ -8,7 +8,7 @@ setTimeout(() => {
 	
 	if("serviceWorker" in navigator) {
 		// TODO
-		// navigator.serviceWorker.register("/service-worker.js");
+		navigator.serviceWorker.register("/service-worker.js");
 	}
 	
 	// populate our placeholder cards
