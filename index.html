@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Movies</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!--link rel="manifest" href="./app.webmanifest.json">
+		<script async src="./pwacompat.min.js"></script -->
+		
+		<link rel="icon" type="image/png" href="/icon/maskable_icon_x128.png" sizes="128x128" />
+		
+		
+		
+		<link rel="apple-touch-icon" href="/icon/apple-touch-icon-192x192.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon-180x180.png" />
+
+		<script>
+			if(document.cookie.split("key=")[1] && document.cookie.split("key=")[1].split(";")[0].trim() !== "") {
+				document.location.pathname = "/home";
+			}
+		</script>
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<a href="#"><h1>Movies is invite-only!</h1></a>
+			</header>
+			<div>Enter your invite key:</div>
+			<div id="set-cookie">
+				<input type="text"/><button onclick="submit(this)">Submit</button>
+			</div>
+		</div>
+		
+		<script>
+			function submit(element) {
+				let value = element.previousElementSibling.value;
+				document.cookie = "key=" + value + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; samesite=strict";
+				document.location.pathname = "/home";
+			}
+		</script>
+	</body>
+</html>

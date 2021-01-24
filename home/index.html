@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Movies</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!--link rel="manifest" href="./app.webmanifest.json">
+		<script async src="./pwacompat.min.js"></script -->
+		
+		<link rel="icon" type="image/png" href="/icon/maskable_icon_x128.png" sizes="128x128" />
+		
+		
+		
+		<link rel="apple-touch-icon" href="/icon/apple-touch-icon-192x192.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon-180x180.png" />
+
+		<script>
+			if(!document.cookie.split("key=")[1] || document.cookie.split("key=")[1].split(";")[0].trim() == "") {
+				document.location.pathname = "/";
+			}
+		</script>
+
+		<link rel="stylesheet" href="/style.css">
+		<script src="/skeleton.js"></script>
+		<script src="/main.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<a href="#"><h1>Movies</h1></a>
+				<input type="text" placeholder="Search"/>
+				<a href="#">Request</a>
+				<a href="#">Account</a>
+			</header>
+			<div id="listing"></div>
+			<div id="background-expand">
+				<div class="player-header">
+					<h3 id="player-name"></h3>
+					<span title="Esc" class="close" onclick="closePlayer(this)">
+						<svg style="height: 50%; width: 50%; pointer-events: none" enable-background="new 0 0 386.667 386.667" height="512" viewBox="0 0 386.667 416.667" width="512" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#eee" d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/>
+						</svg>
+					</span>
+				</div>
+				<video id="video" autoplay onclick="togglePlayPause(this)" onplay="updateVideo(this)" onpause="updateVideo(this)" ontimeupdate="updateScrollbar(this)">
+					<track id="eng-sub" label="English" kind="subtitles" srclang="en" default>
+				</video>
+				<div class="player-footer">
+					<span class="play-pause" onclick="togglePlayPause(this)"><img src="/icon/play.svg"/></span><input autocomplete="off" type="range" min="0" max="3840" value="0" onchange="updateVideoPosition(this, true)" oninput="updateVideoPosition(this, false)"><span class="player-settings" onclick="toggleSettings(this)"><img src="/icon/settings.svg"/></span><span class="fullscreen" onclick="toggleFullscreen(this)"><img src="/icon/fullscreen.svg"/></span>
+				</div>
+				<div class="overlay"></div>
+			</div>
+		</div>
+	</body>
+</html>
