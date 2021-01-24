@@ -6,10 +6,11 @@ setTimeout(() => {
 		document.getElementById("app").style = "max-width: 90%";
 	}
 	
-	/* if("serviceWorker" in navigator) {
-		navigator.serviceWorker.register("/service-worker.js");
-	} */
-
+	if("serviceWorker" in navigator) {
+		// TODO
+		// navigator.serviceWorker.register("/service-worker.js");
+	}
+	
 	// populate our placeholder cards
 	for(let i = 0; i < 15; i++) {
 		document.getElementById("listing").innerHTML += skeleton.placeholderCard;
