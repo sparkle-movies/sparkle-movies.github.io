@@ -1,9 +1,9 @@
 let workerVersion = "v1";
 
 let appShell = [
-	"/home",
-	"/main.js",
-	"/style.css"
+	"https://xn--0ci.adam.tf/home",
+	"https://xn--0ci.adam.tf/main.js",
+	"https://xn--0ci.adam.tf/style.css"
 ];
 
 self.addEventListener("install", event => {
