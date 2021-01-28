@@ -1,8 +1,8 @@
 @font-face {
-	font-family: "product-sans";
+	font-family: "google-sans";
 	font-style: normal;
 	font-weight: 400;
-	src: url(/product-sans.woff2) format("woff2");
+	src: url(/google-sans.woff2) format("woff2");
 }
 
 html {
@@ -19,7 +19,7 @@ html {
 	--color-black: #222;
 	--color-text: var(--color-white);
 	--color-bg: var(--color-black);
-	--font-display: "product-sans", sans-serif;
+	--font-display: google-sans, sans-serif;
 	--font-text: "Roboto", sans-serif;
 }
 
