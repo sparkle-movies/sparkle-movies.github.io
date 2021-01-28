@@ -407,6 +407,7 @@ figure .back .watch:hover {
 		padding-top: 0;
 	}
 	header {
+		font-weight: normal;
 		width: 100%;
 		position: sticky;
 		background-color: var(--color-bg);
