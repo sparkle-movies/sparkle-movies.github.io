@@ -399,6 +399,9 @@ figure .back .watch:hover {
 }
 
 @media (max-width:480px)  {
+	:root {
+		--font-xxl: 1.75rem;
+	}
 	#app {
 		width: calc(100% - 88px) !important;
 		padding-top: 0;
