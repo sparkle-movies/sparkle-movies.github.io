@@ -366,8 +366,7 @@ figure:hover .back .watch {
 	z-index: 4;
 }
 
-@media (max-width:480px)  { 
-	/* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width:480px)  {
 	#app {
 		width: calc(100% - 88px) !important;
 		padding-top: 0;
