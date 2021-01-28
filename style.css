@@ -91,7 +91,7 @@ input[type=text]:focus, input[type=text]:hover {
 }
 
 header {
-	font-family: var(--font-display);
+	font-family: var(--font-display) !important;
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -157,7 +157,7 @@ figure:hover {
 }
 
 .back h2 {
-	font-family: var(--font-display);
+	font-family: var(--font-display) !important;
 	margin-top: 0;
 	margin-bottom: 1rem;
 	opacity: 0;
@@ -234,7 +234,7 @@ figure:hover .stats {
 }
 
 .back .watch {
-	font-family: var(--font-display);
+	font-family: var(--font-display) !important;
 	background-color: var(--color-text);
 	color: var(--color-bg);
 	padding: 1rem;
@@ -272,7 +272,7 @@ figure .back .watch:hover {
 }
 
 #background-expand {
-	font-family: var(--font-display);
+	font-family: var(--font-display) !important;
 	position: fixed;
 	top: 0;
 	left: 0;
