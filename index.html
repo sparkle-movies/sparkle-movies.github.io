@@ -2,15 +2,9 @@
 <html lang="en">
 	<head>
 		<title>Movies</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!--link rel="manifest" href="./app.webmanifest.json">
-		<script async src="./pwacompat.min.js"></script -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		
 		<link rel="icon" type="image/png" href="/icon/maskable_icon_x128.png" sizes="128x128" />
-		
-		
-		
 		<link rel="apple-touch-icon" href="/icon/apple-touch-icon-192x192.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png" />
 		<link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png" />
@@ -22,6 +16,7 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon-180x180.png" />
 
 		<script>
+			// send to homepage if "key" cookie is present
 			if(document.cookie.split("key=")[1] && document.cookie.split("key=")[1].split(";")[0].trim() !== "") {
 				document.location.pathname = "/home";
 			}

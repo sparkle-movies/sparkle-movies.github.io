@@ -400,25 +400,29 @@ figure .back .watch:hover {
 
 @media (max-width:480px)  {
 	:root {
-		--font-xxl: 1.75rem;
+		--font-xxl: 1.5rem;
 	}
 	#app {
 		width: calc(100% - 88px) !important;
 		padding-top: 0;
 	}
 	header {
-		font-weight: normal;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		font-weight: lighter;
 		width: 100%;
 		position: sticky;
 		background-color: var(--color-bg);
 		padding: 0.75rem 0;
 		border-bottom: 1px rgba(127, 127, 127, 0.25) solid;
+		position: fixed;
+		left: 0;
 	}
 	header *:not(:nth-of-type(1)), header input[type=text] {
 		display: none;
 	}
 	#listing {
-		margin-top: 0;
+		margin-top: 4rem;
 		width: 100%;
 		grid-template-columns: repeat(2, calc(50% - 12px));
 		grid-column-gap: 24px;

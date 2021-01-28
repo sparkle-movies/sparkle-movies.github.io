@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<title>Movies</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="theme-color" content="#222222">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		
+		<meta name="theme-color" content="#222222">
 		<link rel="manifest" href="/app.webmanifest.json">
 		
 		<link rel="icon" type="image/png" href="/icon/maskable_icon_x128.png" sizes="128x128" />
@@ -19,6 +19,7 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon-180x180.png" />
 
 		<script>
+			// send to login page if no "key" cookie is present
 			if(!document.cookie.split("key=")[1] || document.cookie.split("key=")[1].split(";")[0].trim() == "") {
 				document.location.pathname = "/";
 			}
@@ -31,7 +32,7 @@
 	<body>
 		<div id="app">
 			<header>
-				<a href="#"><h1>Movies</h1></a>
+				<a href="#"><h1>✨ Movies</h1></a>
 				<input type="text" placeholder="Search"/>
 				<a href="#">Request</a>
 				<a href="#">Account</a>
