@@ -402,6 +402,9 @@ figure .back .watch:hover {
 	:root {
 		--font-xxl: 1.5rem;
 	}
+	body {
+		overscroll-behavior: contain;
+	}
 	#app {
 		width: calc(100% - 88px) !important;
 		padding-top: 0;
