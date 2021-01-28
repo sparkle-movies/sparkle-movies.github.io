@@ -1,3 +1,10 @@
+@font-family {
+	font-family: "Product Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/product-sans.woff2") format("woff2");
+}
+
 html {
 	font-size: 16px;
 }
@@ -24,7 +31,7 @@ body {
 }
 
 #app {
-	padding: 40px 44px;
+	padding: 40px 22px;
 	width: 960px;
 	margin: 0 auto;
 }
@@ -85,7 +92,13 @@ input[type=text]:focus, input[type=text]:hover {
 
 header {
 	font-family: var(--font-display);
-	user-select: none;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	-webkit-tap-highlight-color: transparent;
 	top: 0;
 	background-color: var(--color-bg);
 	display: grid;
@@ -114,7 +127,13 @@ figure {
 	position: relative;
 	width: 100%;
 	margin: 1rem 0;
-	user-select: none;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 figure:hover {
@@ -231,6 +250,10 @@ figure:hover .stats {
 	text-decoration: none;
 	pointer-events: none;
 	cursor: pointer;
+	pointer-events: none;
+}
+
+figure:hover .back .watch {
 	pointer-events: all;
 }
 
@@ -242,6 +265,10 @@ figure:hover .back .watch {
 	opacity: 1;
 	transform: translateY(-1.25rem);
 	animation: buttonInteractivityFix 0.2s forwards;
+}
+
+figure .back .watch:hover {
+	background-color: #999;
 }
 
 #background-expand {
@@ -304,12 +331,17 @@ figure:hover .back .watch {
 	border: 1px rgba(127, 127, 127, 0.5) solid;
 	border-radius: 2rem;
 	cursor: pointer;
-	transition: background-color 0.1s cubic-bezier(0.8, 1, 0.2, 1);
-	user-select: none;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .player-header span.close:hover {
-	background-color: rgba(127, 127, 127, 0.1);
+	background-color: rgba(127, 127, 127, 1);
 }
 
 .player-footer {
@@ -366,8 +398,7 @@ figure:hover .back .watch {
 	z-index: 4;
 }
 
-@media (max-width:480px)  { 
-	/* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width:480px)  {
 	#app {
 		width: calc(100% - 88px) !important;
 		padding-top: 0;
@@ -385,7 +416,8 @@ figure:hover .back .watch {
 	#listing {
 		margin-top: 0;
 		width: 100%;
-		grid-template-columns: repeat(2, calc(50% - 24px));
+		grid-template-columns: repeat(2, calc(50% - 12px));
+		grid-column-gap: 24px;
 	}
 }
 @media (max-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
