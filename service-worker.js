@@ -33,7 +33,8 @@ self.addEventListener("fetch", event => {
 			return response;
 		}
 		
-		function noResolve() {
+		function noResolve(err) {
+			console.log(err);
 			return new Response("<h1>Service Unavailable</h1>", {
 				status: 503,
 				statusText: "Service Unavailable",

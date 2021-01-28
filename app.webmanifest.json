@@ -50,6 +50,6 @@
 	"name": "Sparkle Movies",
 	"orientation": "any",
 	"short_name": "Sparkle Movies",
-	"start_url": "/home",
+	"start_url": "/home/index.html",
 	"theme_color": "#222222"
 }

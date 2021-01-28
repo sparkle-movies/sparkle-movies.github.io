@@ -1,6 +1,6 @@
 const skeleton = {
 	card: (item) => `
-		<figure>
+		<figure onclick="">
 			<div class="front">
 				<div class="loading-image" style="background-image: url('https://image.tmdb.org/t/p/w200/${item.poster}.jpg')"></div>
 			</div>
