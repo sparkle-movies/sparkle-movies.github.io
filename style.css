@@ -366,7 +366,8 @@ figure:hover .back .watch {
 	z-index: 4;
 }
 
-@media (max-width:480px)  {
+@media (max-width:480px)  { 
+	/* smartphones, iPhone, portrait 480x320 phones */ 
 	#app {
 		width: calc(100% - 88px) !important;
 		padding-top: 0;
@@ -375,7 +376,8 @@ figure:hover .back .watch {
 		width: 100%;
 		position: sticky;
 		background-color: var(--color-bg);
-		padding: 1rem 0;
+		padding: 1.25rem 0;
+		border-bottom: 1px rgba(127, 127, 127, 0.25) solid;
 	}
 	header *:not(:nth-of-type(1)), header input[type=text] {
 		display: none;
@@ -384,10 +386,6 @@ figure:hover .back .watch {
 		margin-top: 0;
 		width: 100%;
 		grid-template-columns: repeat(2, calc(50% - 24px));
-	}
-	#listing figure {
-		margin-top: 0;
-		margin-bottom: 2rem;
 	}
 }
 @media (max-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
