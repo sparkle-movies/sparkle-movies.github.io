@@ -17,13 +17,14 @@ html {
 }
 
 body {
-	font-family: var(--font-text);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	background-color: var(--color-bg);
 	color: var(--color-text);
 	margin: 0;
 }
 
 #app {
+	padding: 40px 44px;
 	width: 960px;
 	margin: 0 auto;
 }
@@ -35,6 +36,7 @@ a, a:visited {
 h1 {
 	font-size: var(--font-xxl);
 	cursor: pointer;
+	margin: 0;
 }
 
 header a {
@@ -84,7 +86,6 @@ input[type=text]:focus, input[type=text]:hover {
 header {
 	font-family: var(--font-display);
 	user-select: none;
-	position: sticky;
 	top: 0;
 	background-color: var(--color-bg);
 	display: grid;
@@ -151,6 +152,7 @@ figure:hover {
 figure:hover .back h2 {
 	transition: opacity 0.2s linear;
 	animation: movieName 0.25s forwards;
+	font-weight: bold;
 }
 
 .back .stats {
@@ -363,3 +365,33 @@ figure:hover .back .watch {
 	pointer-events: none;
 	z-index: 4;
 }
+
+@media (max-width:480px)  { 
+	/* smartphones, iPhone, portrait 480x320 phones */ 
+	#app {
+		width: calc(100% - 88px) !important;
+		padding-top: 0;
+	}
+	header {
+		width: 100%;
+		position: sticky;
+		background-color: var(--color-bg);
+		padding: 1rem 0;
+	}
+	header *:not(:nth-of-type(1)), header input[type=text] {
+		display: none;
+	}
+	#listing {
+		margin-top: 0;
+		width: 100%;
+		grid-template-columns: repeat(2, calc(50% - 24px));
+	}
+	#listing figure {
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+}
+@media (max-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (max-width:960px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (max-width:1024px) { /* big landscape tablets, laptops, and desktops */ }
+@media (max-width:1280px) { /* hi-res laptops and desktops */ }
