@@ -18,30 +18,13 @@ self.addEventListener("fetch", event => {
 	}
 	event.respondWith(caches.match(event.request).then(cached => {
 		let networked = fetch(event.request)
-			.then(networkFetch, noResolve)
 			.catch(noResolve);
 		
 		return cached || networked;
 		
-		function networkFetch(response) {
-			let cachedCopy = response.clone();
-			
-			caches.open("sparkle-movies-" + workerVersion).then(function add(cache) {
-				cache.put(event.request, cachedCopy);
-			});
-			
-			return response;
-		}
-		
 		function noResolve(err) {
 			console.log(err);
-			return new Response("<h1>Service Unavailable</h1>", {
-				status: 503,
-				statusText: "Service Unavailable",
-				headers: new Headers({
-					"Content-Type": "text/html"
-				})
-			});
+			return new Response("{'error': 'Service unavailable'}", { status: 503 });
 		}
 	}));
 });
